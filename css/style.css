@@ -18,14 +18,14 @@ body {
 #wrap {
     position: relative;
     width: 100%;
-    min-width: 1260px;
+    overflow: hidden;
 }
 header {
     position:fixed;
     width:100%;
     top:0;
     left:0;
-    height:90px;
+    height:80px;
     -webkit-transition-duration:0.4s;
     -webkit-transition-timing-function:ease;
     transition-duration:0.4s;
@@ -33,32 +33,29 @@ header {
     z-index : 500;
     /* background-color: rgba(255,255,255,0.2); */
 }
-.down {
-    color : #ffffff;
-    background-color:rgba(0,0,0,.8);
-    -webkit-transition-duration:0.4s;
-    -webkit-transition-timing-function:ease;
-    transition-duration:0.4s;
-    transition-timing-function:ease;
-}
+
 .header_in {
-    width: 1260px;
-    height: 90px;
+    width: 1100px;
+    height: 80px;
     display: flex;
     margin : 0 auto;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
- /* .header_in:before {
+  /* .header_in:before {
     content : "";
     display: block;
     height: 1px;
     width: 100%;
     background-color: #ccc;
     position: absolute;
-    top :45px;
-}  */
+    top :40px;
+}   */
+.logo {
+    padding-left: 20px;
+}
 .logo a{
     display: block;
     width: 160px;
@@ -70,18 +67,27 @@ header {
 }
 .nav ul {
     display: flex;
+    padding-right: 20px;
 }
 .nav ul li {
     margin-left: 70px;
 }
 .nav li a {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 700;
     color : #494846;
     padding : 5px 10px;
 }
+.down {
+    color : #fff;
+    background-color:rgba(0,0,0,.8);
+    -webkit-transition-duration:0.4s;
+    -webkit-transition-timing-function:ease;
+    transition-duration:0.4s;
+    transition-timing-function:ease;
+}
 .safe_size {
-    width: 1260px;
+    width: 1100px;
     margin : 0 auto;
 }
 .main1 {
@@ -91,7 +97,6 @@ header {
     position: relative;
     width: 100%;
     height: 100vh;
-    margin-bottom: 120px;
 }
 .m1_text {
     width: 100%;
@@ -179,6 +184,7 @@ header {
   }
 }
 .main2 {
+    padding-top: 120px;
     margin-bottom: 120px;
 }
 .main2 h1{
@@ -194,7 +200,9 @@ header {
 .m2boxL {
     display: flex;
     flex-direction: column;
-    margin-left: 130px;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
 }
 .m2boxL .profile {
     margin-top: 45px;
@@ -217,7 +225,8 @@ header {
     font-weight: 400;
 }
 .m2boxR {
-    margin-left: 130px;
+    width: 60%;
+    margin-left: 66px;
 }
 .edu h3, .cer h3, .sw h3 {
     font-size: 22px;
@@ -303,15 +312,22 @@ header {
     margin-bottom: 70px;
 }
 .main3 .ikea, .iljin, .twosome {
+    width: 1000px;
     display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
     margin-bottom: 186px;
 }
 .iljin { 
-    padding-bottom: 80px;
+    padding-bottom: 100px;
     margin-bottom: 0;
 }
 .mockupImg {
-    margin-left: 111px;
+    width: 433px;
+}
+.mockupImg img {
+    width: 100%;
+    height: auto;
 }
 .ikea .ikeaText,
 .twosome .twosomeText,
@@ -319,7 +335,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 117px;
+    width: 450px;
 }
 .ikeaText h3,
 .twosomeText h3,
@@ -357,35 +373,40 @@ header {
 .btn1 a {
     display: block;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     color : #494846;
     width: 150px;
     height: 50px;
-    border : 2px solid #494846;
+    border : 1px solid #494846;
+    border-radius: 5px;
     text-align: center;
     line-height: 48px;
+    transition : .5s;
 }
 .btn1 a:hover {
-    background-color: #494846;
-    color : #fafafa;
+    border : 1px solid #999;
+    box-shadow: 0 0 11px rgba(33,33,33,.7); 
 }
-.btn2 {
-    margin-right: 13px;
+.btn22{
+    display: flex;
+    justify-content: space-between;
 }
-.btn2 a {
+.btn2 a{
     display: block;
     font-size: 12px;
-    font-weight: 400;
+    font-weight: 700;
     color : #494846;
     width: 100px;
     height: 45px;
-    border : 2px solid #494846;
+    border : 1px solid #494846;
+    border-radius: 5px;
     text-align: center;
     line-height: 43px;
+    transition : .5s;
 }
 .btn2 a:hover {
-    background-color: #494846;
-    color : #fafafa;
+    border : 1px solid #999;
+    box-shadow: 0 0 11px rgba(33,33,33,.7); 
 }
 .main4 {
     background-image: url("../img/contact_bg.jpg");

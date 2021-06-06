@@ -1,17 +1,16 @@
 //header 스크롤 시 색상 변경
 $(function () {
-    var $header = $('header'); //헤더를 변수에 넣기
-    var $page = $('.main2'); //색상이 변할 부분
-    var $window = $(window);
-    var pageOffsetTop = $page.offset().top;//색상 변할 부분의 top값 구하기
-
-    $window.resize(function () { //반응형을 대비하여 리사이즈시 top값을 다시 계산
-        pageOffsetTop = $page.offset().top;
-    });
-
-    $window.on('scroll', function () { //스크롤시
-        var scrolled = $window.scrollTop() >= pageOffsetTop; //스크롤된 상태; true or false
-        $header.toggleClass('down', scrolled); //클래스 토글
+    $(window).on("scroll", function () {
+        if ($(window).scrollTop() > 50) {
+            $("header").addClass("down");
+            $(".nav ul li a").css('color', '#fafafa');
+            $(".logo a").css("background-image", "url(../img/logo_white.png)");
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+            $("header").removeClass("down");
+            $(".nav ul li a").css('color', '#494846');
+            $(".logo a").css("background-image", "url(../img/logo.png)");
+        }
     });
 });
 /* 발견되면 활성화시키는 라이브러리 시작 */
