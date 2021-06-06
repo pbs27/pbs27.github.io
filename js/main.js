@@ -14,7 +14,6 @@ $(function () {
         $header.toggleClass('down', scrolled); //클래스 토글
     });
 });
-
 /* 발견되면 활성화시키는 라이브러리 시작 */
 function ActiveOnVisible__init() {
     $(window).resize(ActiveOnVisible__initOffset);
@@ -71,7 +70,7 @@ $(function () {
 })
 /* 발견되면 활성화시키는 라이브러리 끝 */
 
-
+/*원형 그래프*/
 function Circle__run() {
     $(".second.circle").each(function (index, node) {
         var perNum = $(node).attr('circleProgress');
