@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url"
+        content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:title" content="pbs 포트폴리오" />
+    <meta property="og:description" content="링크를 누르면 포트폴리오를 볼 수 있습니다." />
+    <meta property="og:image"
+        content="https://thumb1.photo.mybox.naver.com/3472450622854442532?type=m1280_1280_2&nocache=1642110606" />
+    <link rel="shortcut icon" href="../pbs27.github.io/img/favicon.ico" />
     <link href="css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>pbs 포트폴리오</title>
 </head>
 
 <body>
@@ -118,45 +125,40 @@
                             <div class="sw">
                                 <h3>Softwere</h3>
                                 <ul>
-                                    <li>
-                                        <div class='second circle1'>
-                                            <strong></strong>
+                                    <li class="active-on-visible"
+                                        data-active-on-visible-callback-func-name="Circle__run">
+                                        <div class='second circle' circleProgress="80">
+                                            <strong class="circle-percent"></strong>
                                         </div>
-                                        <div class="gname">
-                                            Photoshop
-                                        </div>
+                                        <span>Photoshop</span>
                                     </li>
-                                    <li>
-                                        <div class='second circle2'>
-                                            <strong></strong>
+                                    <li class="active-on-visible"
+                                        data-active-on-visible-callback-func-name="Circle__run">
+                                        <div class='second circle' circleProgress="75">
+                                            <strong class="circle-percent"></strong>
                                         </div>
-                                        <div class="gname">
-                                            Illustrator
-                                        </div>
+                                        <span>Illustrator</span>
                                     </li>
-                                    <li>
-                                        <div class='second circle3'>
-                                            <strong></strong>
+                                    <li class="active-on-visible"
+                                        data-active-on-visible-callback-func-name="Circle__run">
+                                        <div class='second circle' circleProgress="90">
+                                            <strong class="circle-percent"></strong>
                                         </div>
-                                        <div class="gname">
-                                            HTML
-                                        </div>
+                                        <span>HTML</span>
                                     </li>
-                                    <li>
-                                        <div class='second circle4'>
-                                            <strong></strong>
+                                    <li class="active-on-visible"
+                                        data-active-on-visible-callback-func-name="Circle__run">
+                                        <div class='second circle' circleProgress="85">
+                                            <strong class="circle-percent"></strong>
                                         </div>
-                                        <div class="gname">
-                                            CSS
-                                        </div>
+                                        <span>CSS</span>
                                     </li>
-                                    <li>
-                                        <div class='second circle5'>
-                                            <strong></strong>
+                                    <li class="active-on-visible"
+                                        data-active-on-visible-callback-func-name="Circle__run">
+                                        <div class='second circle' circleProgress="70">
+                                            <strong class="circle-percent"></strong>
                                         </div>
-                                        <div class="gname">
-                                            JS
-                                        </div>
+                                        <span>JS</span>
                                     </li>
                                 </ul>
                             </div>
@@ -164,7 +166,7 @@
                     </div>
                 </div>
             </section>
-            <section class="main3" id="portfolio">
+            <section class=" main3" id="portfolio">
                 <div class="safe_size">
                     <h1>Portfolio</h1>
                     <div class="ikea">
@@ -301,8 +303,10 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="jquery-circle-progress/dist/circle-progress.js"></script>
-    <script src="js/circle-progress.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"
+        integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q=="
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 

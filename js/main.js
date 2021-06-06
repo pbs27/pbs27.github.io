@@ -15,108 +15,83 @@ $(function () {
     });
 });
 
-//포토샵 원형그래프
-$(function () {
-    var perNum1 = 80;
-    $('.second.circle1').circleProgress({
-        value: perNum1 / 100,
-        startAngle: 300,
-        size: 84,
-        fill: {
-            color: "#494949"
-        },
-        animation: {
-            duration: 2200,
-            easing: "swing"
-        },
-        lineCap: "butt",
-        reverse: true
+/* 발견되면 활성화시키는 라이브러리 시작 */
+function ActiveOnVisible__init() {
+    $(window).resize(ActiveOnVisible__initOffset);
+    ActiveOnVisible__initOffset();
 
-    }).on('circle-animation-progress', function (event, progress) {
-        $(this).find('strong').html(Math.round(perNum1 * progress) + '<i>%</i>');
-    });
-});
-//일러스트 원형그래프
-$(function () {
-    var perNum2 = 70;
-    $('.second.circle2').circleProgress({
-        value: perNum2 / 100,
-        startAngle: 300,
-        size: 84,
-        fill: {
-            color: "#494949"
-        },
-        animation: {
-            duration: 2200,
-            easing: "swing"
-        },
-        lineCap: "butt",
-        reverse: true
+    $(window).scroll(ActiveOnVisible__checkAndActive);
+    ActiveOnVisible__checkAndActive();
+}
 
-    }).on('circle-animation-progress', function (event, progress) {
-        $(this).find('strong').html(Math.round(perNum2 * progress) + '<i>%</i>');
-    });
-});
-//html 원형그래프
-$(function () {
-    var perNum3 = 90;
-    $('.second.circle3').circleProgress({
-        value: perNum3 / 100,
-        startAngle: 300,
-        size: 84,
-        fill: {
-            color: "#494949"
-        },
-        animation: {
-            duration: 2200,
-            easing: "swing"
-        },
-        lineCap: "butt",
-        reverse: true
+function ActiveOnVisible__initOffset() {
+    $('.active-on-visible').each(function (index, node) {
+        var $node = $(node);
 
-    }).on('circle-animation-progress', function (event, progress) {
-        $(this).find('strong').html(Math.round(perNum3 * progress) + '<i>%</i>');
-    });
-});
-//css 원형그래프
-$(function () {
-    var perNum4 = 90;
-    $('.second.circle4').circleProgress({
-        value: perNum4 / 100,
-        startAngle: 300,
-        size: 84,
-        fill: {
-            color: "#494949"
-        },
-        animation: {
-            duration: 2200,
-            easing: "swing"
-        },
-        lineCap: "butt",
-        reverse: true
+        var offsetTop = $node.offset().top;
+        $node.attr('data-active-on-visible-offsetTop', offsetTop);
 
-    }).on('circle-animation-progress', function (event, progress) {
-        $(this).find('strong').html(Math.round(perNum4 * progress) + '<i>%</i>');
-    });
-});
-//js 원형그래프
-$(function () {
-    var perNum5 = 70;
-    $('.second.circle5').circleProgress({
-        value: perNum5 / 100,
-        startAngle: 300,
-        size: 84,
-        fill: {
-            color: "#494949"
-        },
-        animation: {
-            duration: 2200,
-            easing: "swing"
-        },
-        lineCap: "butt",
-        reverse: true
+        if (!$node.attr('data-active-on-visible-diff-y')) {
+            $node.attr('data-active-on-visible-diff-y', '0');
+        }
 
-    }).on('circle-animation-progress', function (event, progress) {
-        $(this).find('strong').html(Math.round(perNum5 * progress) + '<i>%</i>');
+        if (!$node.attr('data-active-on-visible-delay')) {
+            $node.attr('data-active-on-visible-delay', '0');
+        }
     });
-});
+
+    ActiveOnVisible__checkAndActive();
+}
+
+function ActiveOnVisible__checkAndActive() {
+    $('.active-on-visible:not(.actived)').each(function (index, node) {
+        var $node = $(node);
+
+        var offsetTop = $node.attr('data-active-on-visible-offsetTop') * 1;
+        var diffY = parseInt($node.attr('data-active-on-visible-diff-y'));
+        var delay = parseInt($node.attr('data-active-on-visible-delay'));
+
+        var callbackFuncName = $node.attr('data-active-on-visible-callback-func-name');
+
+        if ($(window).scrollTop() + $(window).height() + diffY > offsetTop) {
+            $node.addClass('actived');
+
+            setTimeout(function () {
+                $node.addClass('active');
+                if (window[callbackFuncName]) {
+                    window[callbackFuncName]($node);
+                }
+            }, delay);
+        }
+    });
+}
+
+$(function () {
+    ActiveOnVisible__init();
+})
+/* 발견되면 활성화시키는 라이브러리 끝 */
+
+
+function Circle__run() {
+    $(".second.circle").each(function (index, node) {
+        var perNum = $(node).attr('circleProgress');
+
+        $(this).circleProgress({
+            value: perNum / 100,
+            startAngle: 300,
+            thickness: 6,
+            fill: {
+                color: "#494846"
+            },
+            animation: {
+                duration: 2200,
+                easing: "swing"
+            },
+            lineCap: "butt",
+            reverse: false
+
+        }).on('circle-animation-progress', function (event, progress) {
+            $(this).find('.circle-percent').html(Math.round(perNum * progress) + '<i>%</i>');
+        });
+    });
+}

@@ -48,7 +48,17 @@ header {
     margin : 0 auto;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
+ /* .header_in:before {
+    content : "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    position: absolute;
+    top :45px;
+}  */
 .logo a{
     display: block;
     width: 160px;
@@ -56,6 +66,7 @@ header {
     text-indent: -987987px;
     background-image: url("../img/logo.png");
     background-repeat: no-repeat;
+    margin-bottom: 6px;
 }
 .nav ul {
     display: flex;
@@ -67,7 +78,7 @@ header {
     font-size: 17px;
     font-weight: 700;
     color : #494846;
-    padding : 10px 5px;
+    padding : 5px 10px;
 }
 .safe_size {
     width: 1260px;
@@ -264,8 +275,16 @@ header {
     justify-content: center;
     align-items: center;
 }
+.sw li span {
+    color : #494846;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 4px;
+}
 .second {position:relative; width:84px;}
-.second > canvas {}
+.second > canvas {
+    width: 100%;
+}
 .second > strong {
     position:absolute;
     top:50%; left:50%;
