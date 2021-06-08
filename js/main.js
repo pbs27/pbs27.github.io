@@ -3,13 +3,9 @@ $(function () {
     $(window).on("scroll", function () {
         if ($(window).scrollTop() > 50) {
             $("header").addClass("down");
-            $(".nav ul li a").css('color', '#fafafa');
-            $(".logo a").css("background-image", "url(../img/logo_white.png)");
         } else {
             //remove the background property so it comes transparent again (defined in your css)
             $("header").removeClass("down");
-            $(".nav ul li a").css('color', '#494846');
-            $(".logo a").css("background-image", "url(../img/logo.png)");
         }
     });
 });
@@ -93,3 +89,14 @@ function Circle__run() {
         });
     });
 }
+$(function () {
+    $(".toggle-menu").click(function () {
+        $(this).toggleClass("active");
+        $('.menu-drawer').toggleClass("open");
+    });
+});
+
+
+$('#sub_container').fullpage({
+    navigation: true
+});
