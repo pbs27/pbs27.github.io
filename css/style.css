@@ -287,7 +287,7 @@ header {
     display: flex;
 }
 .sw li {
-    margin: 0 17px;
+    margin-right:34px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -318,7 +318,7 @@ header {
 .main3 {
     background-image: url(../img/portfolio_bg.jpg);
 }
-.main3 h1, .main4 h1 {
+.main3 h1 {
     padding-top: 80px;
     text-align: center;
     color : #494846;
@@ -425,10 +425,37 @@ header {
     box-shadow: 0 0 11px rgba(33,33,33,.7); 
 }
 .main4 {
-    background-image: url("../img/contact_bg.jpg");
+    background-image: url("../img/home_bg2.jpg");
     padding-bottom: 70px;
+    height: 100vh;
+    position: relative;
 }
-.conbox ul li {
-    display: flex;
-    justify-content: center;
+.m4tx {
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+}
+.main4 h1 {
+    text-align: center;
+    color : #494846;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 70px;
+}
+.conbox {
+    position: absolute;
+    top : 70%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+}
+.tel {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.email {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 140px;
 }
