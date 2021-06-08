@@ -292,6 +292,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .sw li span {
     color : #494846;
