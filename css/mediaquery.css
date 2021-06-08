@@ -239,12 +239,16 @@
         width: 80px;
         margin-right: 20px;
         font-size : 15px;
-        margin-bottom: 10px;
     }
-    .m2boxR .edutext {
+    .edu li .edutext,
+    .cer li .edutext {
         width: 270px;
         font-size: 15px;
         display: inline-block;
+        margin-bottom: 10px;
+    }
+    .main3 h1, .main4 h1 {
+        padding-top: 60px;
     }
     .main3 .ikea, .iljin, .twosome {
         flex-direction: column;
@@ -299,6 +303,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        margin : 0 auto;
     }
     .btn1 a {
         width: 120px;

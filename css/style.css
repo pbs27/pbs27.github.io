@@ -264,12 +264,12 @@ header {
     font-weight: 700;
     color : #494846;
     margin-right: 40px;
-    margin-bottom: 20px;
 }
 .m2boxR li:last-child .date {
     margin-bottom: 0;
 }
-.edu li .edutext {
+.edu li .edutext, .cer li .edutext {
+    margin-bottom: 20px;
     font-size: 16px;
     font-weight: 400;
     color : #494846;
@@ -283,11 +283,6 @@ header {
 .cer li {
     display: flex;
 }
-.cer li .edutext {
-    font-size: 16px;
-    font-weight: 400;
-    color : #494846;
-}
 .sw ul{
     display: flex;
 }
@@ -298,16 +293,13 @@ header {
     justify-content: center;
     align-items: center;
 }
-.sw li:last-child {
-    margin-right: 0px;
-}
 .sw li span {
     color : #494846;
     font-size: 14px;
     font-weight: 700;
     margin-top: 4px;
 }
-.second {position:relative; width:84px;}
+.second {position:relative; width: 84px;}
 .second > canvas {
     width: 100%;
 }
@@ -385,7 +377,7 @@ header {
     display: flex;
 }
 .btn1 {
-    margin-right: 20px;
+    margin: 0 10px;
 }
 .btn1 a {
     display: block;
